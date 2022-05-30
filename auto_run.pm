@@ -32,9 +32,9 @@ sub plugin_config{
 		# 複合語リストを作成する
 		use mysql_hukugo;
 		mysql_hukugo->run_from_morpho;
-		my $target_excel = $::project_obj->file_HukugoList;
 		
 		# 複合語リストのExcelファイルをCSVファイルに変換
+		my $target_excel = $::project_obj->file_HukugoList;
 		my $file_vars = "hukugo.txt";
 		use screen_code::rde_excel_to_csv;
 		use rde_kh_spreadsheet;
